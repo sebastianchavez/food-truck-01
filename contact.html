@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto | Food Truck</title>
+  <meta name="description" content="Contáctanos para reservas, catering o preguntas. Estamos en Av. Libertador Bernardo O'Higgins 123. Horarios L-V 11-22, S-D 10-23." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: '#FF6B35', 'primary-dark': '#E55A24', secondary: '#F7931E', accent: '#7CB342', dark: '#1F2937', light: '#FFF8F0' },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="font-sans bg-white text-dark antialiased">
+
+  <!-- ============ NAVBAR ============ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="index.html" class="flex items-center space-x-2">
+          <span class="text-3xl">🚚</span>
+          <span class="font-extrabold text-2xl text-dark">Food<span class="text-primary">Truck</span></span>
+        </a>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-dark hover:text-primary font-semibold transition">Inicio</a>
+          <a href="about.html" class="text-dark hover:text-primary font-semibold transition">Sobre Nosotros</a>
+          <a href="menu.html" class="text-dark hover:text-primary font-semibold transition">Menú</a>
+          <a href="services.html" class="text-dark hover:text-primary font-semibold transition">Servicios</a>
+          <a href="gallery.html" class="text-dark hover:text-primary font-semibold transition">Galería</a>
+          <a href="contact.html" class="text-primary font-semibold border-b-2 border-primary pb-1">Contacto</a>
+          <a href="contact.html" class="bg-primary hover:bg-primary-dark text-white font-bold px-5 py-2 rounded-full transition">Ordena Ya</a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden text-dark">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t">
+        <div class="flex flex-col py-4 space-y-3 px-4">
+          <a href="index.html" class="text-dark hover:text-primary font-semibold py-2">Inicio</a>
+          <a href="about.html" class="text-dark hover:text-primary font-semibold py-2">Sobre Nosotros</a>
+          <a href="menu.html" class="text-dark hover:text-primary font-semibold py-2">Menú</a>
+          <a href="services.html" class="text-dark hover:text-primary font-semibold py-2">Servicios</a>
+          <a href="gallery.html" class="text-dark hover:text-primary font-semibold py-2">Galería</a>
+          <a href="contact.html" class="text-primary font-semibold py-2">Contacto</a>
+          <a href="contact.html" class="bg-primary text-white font-bold px-5 py-2 rounded-full text-center">Ordena Ya</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero-gradient pt-32 pb-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+      <span class="text-primary font-bold uppercase tracking-wider text-sm">Contacto</span>
+      <h1 class="text-5xl md:text-6xl font-extrabold text-dark mt-3 mb-4">Hablemos</h1>
+      <p class="text-xl text-gray-700 max-w-2xl mx-auto">¿Tienes preguntas, quieres reservar o contratar nuestro catering? Escríbenos.</p>
+    </div>
+  </section>
+
+  <!-- ============ INFO + FORMULARIO ============ -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12">
+
+        <!-- FORMULARIO -->
+        <div class="reveal">
+          <h2 class="text-3xl font-extrabold mb-2">Envíanos un mensaje</h2>
+          <p class="text-gray-600 mb-6">Te respondemos en menos de 24 horas.</p>
+
+          <form id="contact-form" novalidate class="space-y-4">
+            <div>
+              <label class="block text-sm font-semibold mb-2">Nombre *</label>
+              <input type="text" name="name" required class="form-input w-full px-4 py-3 rounded-lg" placeholder="Tu nombre completo" />
+              <p class="error-message"></p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-semibold mb-2">Email *</label>
+                <input type="email" name="email" required class="form-input w-full px-4 py-3 rounded-lg" placeholder="tu@email.cl" />
+                <p class="error-message"></p>
+              </div>
+              <div>
+                <label class="block text-sm font-semibold mb-2">Teléfono *</label>
+                <input type="tel" name="phone" required class="form-input w-full px-4 py-3 rounded-lg" placeholder="+56 9 1234 5678" />
+                <p class="error-message"></p>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold mb-2">Asunto</label>
+              <select name="subject" class="form-input w-full px-4 py-3 rounded-lg bg-white">
+                <option>Consulta general</option>
+                <option>Catering / Evento</option>
+                <option>Reservación</option>
+                <option>Colaboración</option>
+                <option>Otro</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold mb-2">Mensaje *</label>
+              <textarea name="message" required rows="5" class="form-input w-full px-4 py-3 rounded-lg resize-none" placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
+              <p class="error-message"></p>
+            </div>
+
+            <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-full transition-all transform hover:scale-[1.02] shadow-lg">
+              Enviar Mensaje →
+            </button>
+          </form>
+
+          <div id="success-message" class="success-message mt-6">
+            <div class="flex items-center">
+              <span class="text-3xl mr-3">✅</span>
+              <div>
+                <p class="font-bold">¡Mensaje enviado con éxito!</p>
+                <p class="text-sm opacity-90">Te responderemos pronto.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- INFO -->
+        <div class="reveal">
+          <h2 class="text-3xl font-extrabold mb-2">Información</h2>
+          <p class="text-gray-600 mb-6">Encuentra nuestro food truck o contáctanos directamente.</p>
+
+          <!-- MAPA -->
+          <div class="rounded-2xl overflow-hidden shadow-lg mb-6 h-64">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.1234567890123!2d-70.6483!3d-33.4489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a4290d5555%3A0x1234567890abcdef!2sSantiago%20Centro%2C%20Chile!5e0!3m2!1ses!2scl!4v1700000000000"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Ubicación Food Truck">
+            </iframe>
+          </div>
+
+          <!-- TARJETAS INFO -->
+          <div class="space-y-4">
+            <div class="bg-light p-5 rounded-xl flex items-start space-x-4">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white text-2xl flex-shrink-0">📍</div>
+              <div>
+                <h3 class="font-bold mb-1">Dirección</h3>
+                <p class="text-gray-700">Av. Libertador Bernardo O'Higgins 123, Santiago Centro, Chile</p>
+              </div>
+            </div>
+
+            <div class="bg-light p-5 rounded-xl flex items-start space-x-4">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white text-2xl flex-shrink-0">🕐</div>
+              <div>
+                <h3 class="font-bold mb-1">Horarios de Atención</h3>
+                <p class="text-gray-700">Lunes a Viernes: 11:00 - 22:00</p>
+                <p class="text-gray-700">Sábado y Domingo: 10:00 - 23:00</p>
+                <p class="text-sm text-red-500 mt-1">Cerrado los martes</p>
+              </div>
+            </div>
+
+            <div class="bg-light p-5 rounded-xl flex items-start space-x-4">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white text-2xl flex-shrink-0">📞</div>
+              <div>
+                <h3 class="font-bold mb-1">Teléfono</h3>
+                <p class="text-gray-700">+56 9 1234 5678</p>
+              </div>
+            </div>
+
+            <div class="bg-light p-5 rounded-xl flex items-start space-x-4">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white text-2xl flex-shrink-0">✉️</div>
+              <div>
+                <h3 class="font-bold mb-1">Email</h3>
+                <p class="text-gray-700">info@foodtruck.cl</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- REDES -->
+          <div class="mt-6 flex justify-center space-x-3">
+            <a href="#" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-primary-dark transition">📘</a>
+            <a href="#" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-primary-dark transition">📷</a>
+            <a href="#" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-primary-dark transition">🐦</a>
+            <a href="#" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-primary-dark transition">🎵</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-dark text-gray-300 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center space-x-2 mb-4">
+            <span class="text-3xl">🚚</span>
+            <span class="font-extrabold text-2xl text-white">Food<span class="text-primary">Truck</span></span>
+          </div>
+          <p class="text-sm">Sabores sobre ruedas desde 2019.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-4">Navegación</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-primary transition">Inicio</a></li>
+            <li><a href="about.html" class="hover:text-primary transition">Sobre Nosotros</a></li>
+            <li><a href="menu.html" class="hover:text-primary transition">Menú</a></li>
+            <li><a href="services.html" class="hover:text-primary transition">Servicios</a></li>
+            <li><a href="gallery.html" class="hover:text-primary transition">Galería</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-4">Contacto</h4>
+          <ul class="space-y-2 text-sm">
+            <li>📍 Av. Libertador Bernardo O'Higgins 123</li>
+            <li>📞 +56 9 1234 5678</li>
+            <li>✉️ info@foodtruck.cl</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-4">Síguenos</h4>
+          <div class="flex space-x-3 mb-4">
+            <a href="#" class="w-10 h-10 bg-primary bg-opacity-20 rounded-full flex items-center justify-center hover:bg-primary transition">📘</a>
+            <a href="#" class="w-10 h-10 bg-primary bg-opacity-20 rounded-full flex items-center justify-center hover:bg-primary transition">📷</a>
+            <a href="#" class="w-10 h-10 bg-primary bg-opacity-20 rounded-full flex items-center justify-center hover:bg-primary transition">🐦</a>
+          </div>
+          <ul class="space-y-2 text-sm">
+            <li><a href="privacy.html" class="hover:text-primary transition">Políticas de Privacidad</a></li>
+            <li><a href="terms.html" class="hover:text-primary transition">Términos y Condiciones</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm">
+        <p>&copy; 2026 Food Truck. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/contact.js"></script>
+</body>
+</html>
+
+
+

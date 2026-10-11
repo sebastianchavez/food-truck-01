@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Truck | Sabores sobre ruedas</title>
+  <meta name="description" content="El mejor food truck de la ciudad. Comida callejera gourmet, catering para eventos, servicio rápido y sabores inolvidables." />
+  <meta property="og:title" content="Food Truck | Sabores sobre ruedas" />
+  <meta property="og:description" content="Comida callejera gourmet sobre ruedas" />
+  <meta property="og:type" content="website" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FF6B35',
+            'primary-dark': '#E55A24',
+            secondary: '#F7931E',
+            accent: '#7CB342',
+            dark: '#1F2937',
+            light: '#FFF8F0'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="font-sans bg-white text-dark antialiased">
+
+  <!-- ============ NAVBAR ============ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="index.html" class="flex items-center space-x-2">
+          <span class="text-3xl">🚚</span>
+          <span class="font-extrabold text-2xl text-dark">Food<span class="text-primary">Truck</span></span>
+        </a>
+
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-primary font-semibold border-b-2 border-primary pb-1">Inicio</a>
+          <a href="about.html" class="text-dark hover:text-primary font-semibold transition">Sobre Nosotros</a>
+          <a href="menu.html" class="text-dark hover:text-primary font-semibold transition">Menú</a>
+          <a href="services.html" class="text-dark hover:text-primary font-semibold transition">Servicios</a>
+          <a href="gallery.html" class="text-dark hover:text-primary font-semibold transition">Galería</a>
+          <a href="contact.html" class="text-dark hover:text-primary font-semibold transition">Contacto</a>
+          <a href="contact.html" class="bg-primary hover:bg-primary-dark text-white font-bold px-5 py-2 rounded-full transition">Ordena Ya</a>
+        </div>
+
+        <button id="mobile-menu-btn" class="md:hidden text-dark">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t">
+        <div class="flex flex-col py-4 space-y-3 px-4">
+          <a href="index.html" class="text-primary font-semibold py-2">Inicio</a>
+          <a href="about.html" class="text-dark hover:text-primary font-semibold py-2">Sobre Nosotros</a>
+          <a href="menu.html" class="text-dark hover:text-primary font-semibold py-2">Menú</a>
+          <a href="services.html" class="text-dark hover:text-primary font-semibold py-2">Servicios</a>
+          <a href="gallery.html" class="text-dark hover:text-primary font-semibold py-2">Galería</a>
+          <a href="contact.html" class="text-dark hover:text-primary font-semibold py-2">Contacto</a>
+          <a href="contact.html" class="bg-primary text-white font-bold px-5 py-2 rounded-full text-center">Ordena Ya</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero-gradient hero-pattern min-h-screen flex items-center pt-20 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="animate-slide-left">
+          <span class="inline-block bg-primary bg-opacity-10 text-primary font-bold px-4 py-2 rounded-full text-sm mb-6 animate-bounce-in">
+            🌮 Bienvenido al mejor food truck
+          </span>
+          <h1 class="text-5xl md:text-7xl font-extrabold text-dark leading-tight mb-6">
+            Sabores <span class="text-primary">sobre ruedas</span>
+          </h1>
+          <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+            Comida callejera gourmet, preparada al momento con ingredientes frescos y locales. Tu próxima comida favorita está a unos pasos.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="menu.html" class="bg-primary hover:bg-primary-dark text-white font-bold px-8 py-4 rounded-full transition-all transform hover:scale-105 shadow-xl">
+              Ver Menú 🍔
+            </a>
+            <a href="contact.html" class="border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold px-8 py-4 rounded-full transition-all">
+              Contáctanos
+            </a>
+          </div>
+
+          <div class="mt-10 flex items-center space-x-6">
+            <div class="flex -space-x-2">
+              <div class="w-10 h-10 rounded-full bg-secondary border-2 border-white flex items-center justify-center text-white font-bold">A</div>
+              <div class="w-10 h-10 rounded-full bg-primary border-2 border-white flex items-center justify-center text-white font-bold">M</div>
+              <div class="w-10 h-10 rounded-full bg-accent border-2 border-white flex items-center justify-center text-white font-bold">L</div>
+            </div>
+            <p class="text-gray-700"><strong class="text-dark">+10,000</strong> clientes felices</p>
+          </div>
+        </div>
+
+        <div class="relative animate-slide-right">
+          <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full blur-3xl opacity-30 animate-pulse-slow"></div>
+          <img
+            src="https://images.unsplash.com/photo-1551782450-17144efb9c50?w=800&q=80"
+            alt="Food Truck"
+            class="relative rounded-3xl shadow-2xl w-full object-cover h-[500px] animate-float"
+            onerror="this.onerror=null;this.src=&quot;data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23FF6B35'/%3E%3Cstop offset='1' stop-color='%23F7931E'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' font-size='140' text-anchor='middle' dominant-baseline='middle'%3E🚚%3C/text%3E%3C/svg%3E&quot;;"
+          />
+          <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl animate-bounce-in" style="animation-delay: 0.5s">
+            <div class="flex items-center space-x-3">
+              <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-2xl">⭐</div>
+              <div>
+                <p class="font-bold text-dark">4.9/5</p>
+                <p class="text-xs text-gray-500">+500 reseñas</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DESTACADOS DEL MENÚ ============ -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <span class="text-primary font-bold uppercase tracking-wider text-sm">Lo más pedido</span>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-dark mt-3 mb-4">Especialidades de la casa</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto text-lg">Estos son los platillos que conquistan a nuestros clientes día con día.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="menu-card bg-light rounded-2xl overflow-hidden shadow-md reveal">
+          <div class="relative h-56 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=500&q=80" alt="Tacos" class="w-full h-full object-cover" onerror="this.onerror=null;this.src=&quot;data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 400'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23FF6B35'/%3E%3Cstop offset='1' stop-color='%23F7931E'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='500' height='400' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' font-size='100' text-anchor='middle' dominant-baseline='middle'%3E🌮%3C/text%3E%3C/svg%3E&quot;;" />
+            <span class="absolute top-3 right-3 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">Más Vendido</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-2">Tacos al Pastor</h3>
+            <p class="text-gray-600 mb-4">Carne de cerdo marinado en achiote con piña, cebolla y cilantro.</p>
+            <span class="text-primary font-bold text-2xl">$4.500 CLP</span>
+          </div>
+        </div>
+
+        <div class="menu-card bg-light rounded-2xl overflow-hidden shadow-md reveal" style="animation-delay: 0.1s">
+          <div class="relative h-56 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&q=80" alt="Burger" class="w-full h-full object-cover" onerror="this.onerror=null;this.src=&quot;data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 400'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23FF6B35'/%3E%3Cstop offset='1' stop-color='%23F7931E'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='500' height='400' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' font-size='100' text-anchor='middle' dominant-baseline='middle'%3E🍔%3C/text%3E%3C/svg%3E&quot;;" />
+            <span class="absolute top-3 right-3 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">Top</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-2">BBQ Bacon Burger</h3>
+            <p class="text-gray-600 mb-4">Doble carne, tocino ahumado, cebolla caramelizada y salsa BBQ.</p>
+            <span class="text-primary font-bold text-2xl">$9.500 CLP</span>
+          </div>
+        </div>
+
+        <div class="menu-card bg-light rounded-2xl overflow-hidden shadow-md reveal" style="animation-delay: 0.2s">
+          <div class="relative h-56 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&q=80" alt="Churros" class="w-full h-full object-cover" onerror="this.onerror=null;this.src=&quot;data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 400'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23FF6B35'/%3E%3Cstop offset='1' stop-color='%23F7931E'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='500' height='400' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' font-size='100' text-anchor='middle' dominant-baseline='middle'%3E🍰%3C/text%3E%3C/svg%3E&quot;;" />
+            <span class="absolute top-3 right-3 bg-secondary text-white text-xs font-bold px-3 py-1 rounded-full">Para compartir</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-2">Churros con Chocolate</h3>
+            <p class="text-gray-600 mb-4">Churros crujientes con azúcar y canela bañados en chocolate.</p>
+            <span class="text-primary font-bold text-2xl">$3.500 CLP</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="menu.html" class="inline-block bg-primary hover:bg-primary-dark text-white font-bold px-8 py-3 rounded-full transition">
+          Ver menú completo →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ¿POR QUÉ ELEGIRNOS? ============ -->
+  <section class="py-24 bg-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <span class="text-primary font-bold uppercase tracking-wider text-sm">Nuestras razones</span>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-dark mt-3 mb-4">¿Por qué elegirnos?</h2>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="text-center reveal">
+          <div class="w-20 h-20 mx-auto bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-4xl mb-4">🌱</div>
+          <h3 class="font-bold text-xl mb-2">Ingredientes Frescos</h3>
+          <p class="text-gray-600">Productos locales del día, siempre frescos y de calidad premium.</p>
+        </div>
+        <div class="text-center reveal" style="animation-delay: 0.1s">
+          <div class="w-20 h-20 mx-auto bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-4xl mb-4">⚡</div>
+          <h3 class="font-bold text-xl mb-2">Servicio Rápido</h3>
+          <p class="text-gray-600">Comida deliciosa sin esperas largas. Tu orden lista en minutos.</p>
+        </div>
+        <div class="text-center reveal" style="animation-delay: 0.2s">
+          <div class="w-20 h-20 mx-auto bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-4xl mb-4">🚚</div>
+          <h3 class="font-bold text-xl mb-2">Donde Estés</h3>
+          <p class="text-gray-600">Nos movemos por la ciudad. Encuentra tu próximo punto de venta.</p>
+        </div>
+        <div class="text-center reveal" style="animation-delay: 0.3s">
+          <div class="w-20 h-20 mx-auto bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-4xl mb-4">💚</div>
+          <h3 class="font-bold text-xl mb-2">Eco-Friendly</h3>
+          <p class="text-gray-600">Embalajes biodegradables y prácticas sustentables.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA FINAL ============ -->
+  <section class="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-6">¿Listo para probar?</h2>
+      <p class="text-xl mb-8 opacity-90">Visítanos o contáctanos para llevar el food truck a tu evento.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="contact.html" class="bg-white text-primary hover:bg-light font-bold px-8 py-4 rounded-full transition-all transform hover:scale-105 shadow-xl">
+          Contáctanos
+        </a>
+        <a href="services.html" class="border-2 border-white hover:bg-white hover:text-primary font-bold px-8 py-4 rounded-full transition-all">
+          Nuestros Servicios
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-dark text-gray-300 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center space-x-2 mb-4">
+            <span class="text-3xl">🚚</span>
+            <span class="font-extrabold text-2xl text-white">Food<span class="text-primary">Truck</span></span>
+          </div>
+          <p class="text-sm">Sabores sobre ruedas desde 2019. Llevamos comida deliciosa a cada rincón de la ciudad.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-4">Navegación</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-primary transition">Inicio</a></li>
+            <li><a href="about.html" class="hover:text-primary transition">Sobre Nosotros</a></li>
+            <li><a href="menu.html" class="hover:text-primary transition">Menú</a></li>
+            <li><a href="services.html" class="hover:text-primary transition">Servicios</a></li>
+            <li><a href="gallery.html" class="hover:text-primary transition">Galería</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-4">Contacto</h4>
+          <ul class="space-y-2 text-sm">
+            <li>📍 Av. Libertador Bernardo O'Higgins 123</li>
+            <li>📞 +56 9 1234 5678</li>
+            <li>✉️ info@foodtruck.cl</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-4">Síguenos</h4>
+          <div class="flex space-x-3 mb-4">
+            <a href="#" class="w-10 h-10 bg-primary bg-opacity-20 rounded-full flex items-center justify-center hover:bg-primary transition">📘</a>
+            <a href="#" class="w-10 h-10 bg-primary bg-opacity-20 rounded-full flex items-center justify-center hover:bg-primary transition">📷</a>
+            <a href="#" class="w-10 h-10 bg-primary bg-opacity-20 rounded-full flex items-center justify-center hover:bg-primary transition">🐦</a>
+          </div>
+          <ul class="space-y-2 text-sm">
+            <li><a href="privacy.html" class="hover:text-primary transition">Políticas de Privacidad</a></li>
+            <li><a href="terms.html" class="hover:text-primary transition">Términos y Condiciones</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm">
+        <p>&copy; 2026 Food Truck. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+

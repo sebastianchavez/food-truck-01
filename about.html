@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre Nosotros | Food Truck</title>
+  <meta name="description" content="Conoce la historia, misión y valores del Food Truck. Más de 5 años llevando sabor a la ciudad." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: '#FF6B35', 'primary-dark': '#E55A24', secondary: '#F7931E', accent: '#7CB342', dark: '#1F2937', light: '#FFF8F0' },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="font-sans bg-white text-dark antialiased">
+
+  <!-- ============ NAVBAR ============ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="index.html" class="flex items-center space-x-2">
+          <span class="text-3xl">🚚</span>
+          <span class="font-extrabold text-2xl text-dark">Food<span class="text-primary">Truck</span></span>
+        </a>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-dark hover:text-primary font-semibold transition">Inicio</a>
+          <a href="about.html" class="text-primary font-semibold border-b-2 border-primary pb-1">Sobre Nosotros</a>
+          <a href="menu.html" class="text-dark hover:text-primary font-semibold transition">Menú</a>
+          <a href="services.html" class="text-dark hover:text-primary font-semibold transition">Servicios</a>
+          <a href="gallery.html" class="text-dark hover:text-primary font-semibold transition">Galería</a>
+          <a href="contact.html" class="text-dark hover:text-primary font-semibold transition">Contacto</a>
+          <a href="contact.html" class="bg-primary hover:bg-primary-dark text-white font-bold px-5 py-2 rounded-full transition">Ordena Ya</a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden text-dark">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t">
+        <div class="flex flex-col py-4 space-y-3 px-4">
+          <a href="index.html" class="text-dark hover:text-primary font-semibold py-2">Inicio</a>
+          <a href="about.html" class="text-primary font-semibold py-2">Sobre Nosotros</a>
+          <a href="menu.html" class="text-dark hover:text-primary font-semibold py-2">Menú</a>
+          <a href="services.html" class="text-dark hover:text-primary font-semibold py-2">Servicios</a>
+          <a href="gallery.html" class="text-dark hover:text-primary font-semibold py-2">Galería</a>
+          <a href="contact.html" class="text-dark hover:text-primary font-semibold py-2">Contacto</a>
+          <a href="contact.html" class="bg-primary text-white font-bold px-5 py-2 rounded-full text-center">Ordena Ya</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO PEQUEÑO ============ -->
+  <section class="hero-gradient pt-32 pb-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+      <span class="text-primary font-bold uppercase tracking-wider text-sm" id="about-subtitle">Sobre Nosotros</span>
+      <h1 class="text-5xl md:text-6xl font-extrabold text-dark mt-3 mb-4" id="about-title">Pasión por la comida callejera</h1>
+      <p class="text-xl text-gray-700 max-w-3xl mx-auto">Más que comida, una experiencia sobre ruedas que conecta a las personas con sabores únicos.</p>
+    </div>
+  </section>
+
+  <!-- ============ HISTORIA ============ -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="reveal">
+          <img src="https://images.unsplash.com/photo-1551782450-17144efb9c50?w=800&q=80" alt="Food truck" class="rounded-3xl shadow-xl w-full h-[400px] object-cover" onerror="this.onerror=null;this.src=&quot;data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23FF6B35'/%3E%3Cstop offset='1' stop-color='%23F7931E'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' font-size='140' text-anchor='middle' dominant-baseline='middle'%3E🚚%3C/text%3E%3C/svg%3E&quot;;" />
+        </div>
+        <div class="reveal">
+          <span class="text-primary font-bold uppercase tracking-wider text-sm">Nuestra Historia</span>
+          <h2 class="text-4xl font-extrabold mt-3 mb-6">Desde 2019 llevando sabor a la ciudad</h2>
+          <p class="text-gray-700 leading-relaxed mb-6" id="about-story">
+            Nacimos con una misión simple: llevar comida deliciosa, rápida y de calidad a cada rincón de la ciudad. Lo que comenzó como un sueño sobre ruedas se ha convertido en una de las experiencias gastronómicas más queridas por nuestros clientes.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            Cada platillo es preparado al momento con ingredientes frescos y locales, garantizando sabor y frescura en cada bocado. Nuestra cocina sobre ruedas no solo vende comida, crea momentos.
+          </p>
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white text-2xl">🔥</div>
+            <p class="font-bold">Hecho con pasión desde el primer día</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="py-20 bg-gradient-to-br from-primary to-secondary text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center" id="stats-container"></div>
+    </div>
+  </section>
+
+  <!-- ============ MISIÓN Y VISIÓN ============ -->
+  <section class="py-20 bg-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-md reveal">
+          <div class="w-14 h-14 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-3xl mb-4">🎯</div>
+          <h3 class="text-2xl font-bold mb-3">Nuestra Misión</h3>
+          <p class="text-gray-700 leading-relaxed" id="about-mission">Ofrecer comida callejera gourmet que combine tradición, sabor y conveniencia.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-md reveal" style="animation-delay: 0.1s">
+          <div class="w-14 h-14 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-3xl mb-4">👁️</div>
+          <h3 class="text-2xl font-bold mb-3">Nuestra Visión</h3>
+          <p class="text-gray-700 leading-relaxed" id="about-vision">Ser el food truck líder en la región, reconocidos por nuestra calidad e innovación.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VALORES ============ -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <span class="text-primary font-bold uppercase tracking-wider text-sm">Lo que nos define</span>
+        <h2 class="text-4xl md:text-5xl font-extrabold mt-3 mb-4">Nuestros Valores</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" id="values-container"></div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="py-20 bg-dark text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-6">¿Quieres conocernos más?</h2>
+      <p class="text-xl mb-8 opacity-90">Pruébanos en persona o contáctanos para cualquier consulta.</p>
+      <a href="contact.html" class="inline-block bg-primary hover:bg-primary-dark text-white font-bold px-8 py-4 rounded-full transition-all transform hover:scale-105 shadow-xl">
+        Contáctanos
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-dark text-gray-300 py-12 border-t border-gray-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center space-x-2 mb-4">
+            <span class="text-3xl">🚚</span>
+            <span class="font-extrabold text-2xl text-white">Food<span class="text-primary">Truck</span></span>
+          </div>
+          <p class="text-sm">Sabores sobre ruedas desde 2019.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-4">Navegación</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-primary transition">Inicio</a></li>
+            <li><a href="about.html" class="hover:text-primary transition">Sobre Nosotros</a></li>
+            <li><a href="menu.html" class="hover:text-primary transition">Menú</a></li>
+            <li><a href="services.html" class="hover:text-primary transition">Servicios</a></li>
+            <li><a href="gallery.html" class="hover:text-primary transition">Galería</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-4">Contacto</h4>
+          <ul class="space-y-2 text-sm">
+            <li>📍 Av. Libertador Bernardo O'Higgins 123</li>
+            <li>📞 +56 9 1234 5678</li>
+            <li>✉️ info@foodtruck.cl</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-4">Síguenos</h4>
+          <div class="flex space-x-3 mb-4">
+            <a href="#" class="w-10 h-10 bg-primary bg-opacity-20 rounded-full flex items-center justify-center hover:bg-primary transition">📘</a>
+            <a href="#" class="w-10 h-10 bg-primary bg-opacity-20 rounded-full flex items-center justify-center hover:bg-primary transition">📷</a>
+            <a href="#" class="w-10 h-10 bg-primary bg-opacity-20 rounded-full flex items-center justify-center hover:bg-primary transition">🐦</a>
+          </div>
+          <ul class="space-y-2 text-sm">
+            <li><a href="privacy.html" class="hover:text-primary transition">Políticas de Privacidad</a></li>
+            <li><a href="terms.html" class="hover:text-primary transition">Términos y Condiciones</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm">
+        <p>&copy; 2026 Food Truck. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/about.js"></script>
+</body>
+</html>
+
+
+
